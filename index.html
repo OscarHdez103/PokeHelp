@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon Type Selector</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="Poke Helper">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <h1>Select Pokémon Type</h1>
+  <form id="typeForm" action="#" method="POST">
+    <div class="type-container">
+      <img src="images/normal.png" alt="Normal" class="type-icon" data-type="normal">
+      <img src="images/fire.png" alt="Fire" class="type-icon" data-type="fire">
+      <img src="images/water.png" alt="Water" class="type-icon" data-type="water">
+      <img src="images/grass.png" alt="Grass" class="type-icon" data-type="grass">
+      <img src="images/electric.png" alt="Electric" class="type-icon" data-type="electric">
+      <img src="images/ice.png" alt="Ice" class="type-icon" data-type="ice">
+      <img src="images/fighting.png" alt="Fighting" class="type-icon" data-type="fighting">
+      <img src="images/poison.png" alt="Poison" class="type-icon" data-type="poison">
+      <img src="images/ground.png" alt="Ground" class="type-icon" data-type="ground">
+      <img src="images/flying.png" alt="Flying" class="type-icon" data-type="flying">
+      <img src="images/psychic.png" alt="Psychic" class="type-icon" data-type="psychic">
+      <img src="images/bug.png" alt="Bug" class="type-icon" data-type="bug">
+      <img src="images/rock.png" alt="Rock" class="type-icon" data-type="rock">
+      <img src="images/ghost.png" alt="Ghost" class="type-icon" data-type="ghost">
+      <img src="images/dragon.png" alt="Dragon" class="type-icon" data-type="dragon">
+      <img src="images/dark.png" alt="Dark" class="type-icon" data-type="dark">
+      <img src="images/steel.png" alt="Steel" class="type-icon" data-type="steel">
+      <img src="images/fairy.png" alt="Fairy" class="type-icon" data-type="fairy">
+    </div>
+    <div class="slot-container">
+      <div class="slot" id="slot1" data-type="">
+        <button type="button" class="remove-btn">x</button>
+      </div>
+      <div class="slot" id="slot2" data-type="">
+        <button type="button" class="remove-btn">x</button>
+      </div>
+      <button type="button" class="clear-btn" id="clearLeftSlots">Clear Left Slots</button>
+    </div>
+    <div class="slot-container-right">
+      <div class="slot" id="slot3" data-type="">
+        <button type="button" class="remove-btn">x</button>
+      </div>
+      <div class="slot" id="slot4" data-type="">
+        <button type="button" class="remove-btn">x</button>
+      </div>
+      <button type="button" class="clear-btn" id="clearRightSlots">Clear Right Slots</button>
+    </div>
+    <div class="center-container">
+      <div class="rect-container left">
+        <div class="rect green" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect light-gray" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect red" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect dark-gray" data-types="">
+          <div class="image-container"></div>
+        </div>
+      </div>
+      <div class="center-label-container">
+        <div class="center-label" id="label1">x_</div>
+        <div class="center-label" id="label2">x_</div>
+        <div class="center-label" id="label3">x_</div>
+        <div class="center-label" id="label4">x_</div>
+      </div>
+      <div class="rect-container right">
+        <div class="rect green" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect light-gray" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect red" data-types="">
+          <div class="image-container"></div>
+        </div>
+        <div class="rect dark-gray" data-types="">
+          <div class="image-container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-container">
+      <div class="save-container" id="save-left-1">
+        <button class="save-left-button">Save 1</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-left-2">
+        <button class="save-left-button">Save 2</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-left-3">
+        <button class="save-left-button">Save 3</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-left-4">
+        <button class="save-left-button">Save 4</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-left-5">
+        <button class="save-left-button">Save 5</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <button type="button" class="switch-btn" id="switchBtn">Switch</button>
+      <div class="save-container" id="save-right-1">
+        <button class="save-right-button">Save 1</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-right-2">
+        <button class="save-right-button">Save 2</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-right-3">
+        <button class="save-right-button">Save 3</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-right-4">
+        <button class="save-right-button">Save 4</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+      <div class="save-container" id="save-right-5">
+        <button class="save-right-button">Save 5</button>
+        <div class="fake-slots">
+          <div class="fake-slot-primary"></div>
+          <div class="fake-slot-secondary"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="search-container">
+      <div class="search-input-container">
+        <label for="searchInput"></label>
+        <input type="text" id="searchInput" placeholder="Search for a Pokémon attack...">
+        <button class="search-button" onclick="searchAttack(event)">Search</button>
+      </div>
+      <div class="search-results" id="searchResults"></div> <!-- Move the search-results here -->
+    </div>
+
+  </form>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
