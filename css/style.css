@@ -171,15 +171,16 @@ body {
 
 /* Ensure the type container doesn't wrap and allows horizontal scrolling  */
 .type-container {
-  left: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   position: fixed;
+  left: 50%;
   transform: translateX(-50%);
   width: 100%;
   margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 /* Ensure type icons maintain their size */
@@ -191,12 +192,6 @@ body {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 
