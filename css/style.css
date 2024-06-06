@@ -169,7 +169,7 @@ body {
   background-color: #d32f2f;
 }
 
-/* Ensure the type container doesn't wrap and allows horizontal scrolling */
+/* Ensure the type container doesn't wrap and allows horizontal scrolling  */
 .type-container {
   display: flex;
   gap: 10px;
