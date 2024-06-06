@@ -96,7 +96,7 @@ body {
 }
 
 .container {
-  width: 1200px; /* Set a fixed width for the main container */
+  width: 1400px; /* Set a fixed width for the main container */
   height: 800px; /* Set a fixed height for the main container */
   overflow: auto; /* Enable scrolling within the container if necessary */
 }
