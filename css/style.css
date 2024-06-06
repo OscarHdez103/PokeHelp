@@ -85,8 +85,8 @@ textarea {
    ========================================================================== */
 @media (max-width: 600px) {
   .center-container {
-    position: fixed;
     top: 70%;
+    position: fixed;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
