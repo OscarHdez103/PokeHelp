@@ -171,6 +171,7 @@ body {
 
 /* Ensure the type container doesn't wrap and allows horizontal scrolling  */
 .type-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -180,7 +181,6 @@ body {
   transform: translateX(-50%);
   width: 100%;
   margin-top: 20px;
-  overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 /* Ensure type icons maintain their size */
