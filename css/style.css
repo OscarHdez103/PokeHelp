@@ -89,8 +89,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0; /* Remove default margin */
-  height: 100vh; /* Make the body take the full viewport height */
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; /* Enable scrolling */
+}
+
+.container {
+  width: 1200px; /* Set a fixed width for the main container */
+  height: 800px; /* Set a fixed height for the main container */
+  overflow: auto; /* Enable scrolling within the container if necessary */
 }
 
 .slot-container,
@@ -105,11 +113,11 @@ body {
 }
 
 .slot-container {
-  left: 20px; /* Padding from the left */
+  left: 20px;
 }
 
 .slot-container-right {
-  right: 20px; /* Padding from the right */
+  right: 20px;
 }
 
 .slot {
@@ -117,7 +125,7 @@ body {
   height: 50px;
   border: 2px dashed #ccc;
   border-radius: 50%;
-  margin-bottom: 20px; /* Padding between slots */
+  margin-bottom: 20px;
   cursor: pointer;
   background-size: cover;
   background-position: center;
@@ -205,10 +213,10 @@ body {
 }
 
 .rect {
-  width: 700px; /* Keep the width */
-  height: 100px; /* Keep the height */
-  position: relative; /* Ensure proper positioning context for any absolute children */
-  overflow: hidden; /* Prevent overflow of content */
+  width: 700px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
 .image-container {
@@ -222,17 +230,17 @@ body {
 }
 
 .image-container img {
-  width: 10%; /* Adjust the width as needed */
+  width: 10%;
   height: auto;
-  margin-right: 5px; /* Space between images */
+  margin-right: 5px;
 }
 
 .image-container img:first-child {
-  margin-left: 10px; /* Add padding to the left of the first type */
+  margin-left: 10px;
 }
 
 .green {
-  background-color: #90ee90; /* Light green */
+  background-color: #90ee90;
 }
 
 .light-gray {
@@ -240,7 +248,7 @@ body {
 }
 
 .red {
-  background-color: #ff7f7f; /* Slightly darker light red */
+  background-color: #ff7f7f;
 }
 
 .dark-gray {
@@ -253,9 +261,9 @@ body {
   justify-content: center;
   background-color: gray;
   color: white;
-  width: 50px; /* Increase width */
-  height: 50px; /* Increase height */
-  font-size: 20px; /* Increase font size */
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
   border-radius: 5px;
 }
 .center-label-container {
@@ -273,10 +281,10 @@ body {
   justify-content: center;
   gap: 30px;
   position: fixed;
-  bottom: 15%; /* 20px margin from the bottom of the screen */
-  left: 50%; /* Position left edge at 50% of the viewport width */
-  transform: translateX(-50%); /* Move the container left by half of its width to center it */
-  width: 100%; /* Ensure the container spans the full width of the viewport */
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .save-container {
@@ -330,10 +338,10 @@ body {
   justify-content: center;
   gap: 30px;
   position: fixed;
-  bottom: 10%; /* 20px margin from the bottom of the screen */
-  left: 50%; /* Position left edge at 50% of the viewport width */
-  transform: translateX(-50%); /* Move the container left by half of its width to center it */
-  width: 100%; /* Ensure the container spans the full width of the viewport */
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .search-input-container {
@@ -343,16 +351,16 @@ body {
 
 .search-results {
   position: absolute;
-  bottom: -70px; /* Move the container further down */
-  left: 1%; /* Adjust this value as needed */
-  width: 20%; /* Adjust width as needed */
+  bottom: -70px;
+  left: 1%;
+  width: 20%;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 0px;
   padding: 0px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  max-height: 190px; /* Increase max height */
+  max-height: 190px;
 }
 
 .result-item {
@@ -374,7 +382,7 @@ body {
 }
 
 input[type="text"] {
-  flex-grow: 1; /* Allow input to take remaining space */
+  flex-grow: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -392,93 +400,6 @@ th, td {
 
 th {
   background-color: #f2f2f2;
-}
-
-/* General mobile adjustments */
-@media (max-width: 599px) {
-  body {
-    font-size: 14px; /* Adjust font size for readability */
-    padding: 10px;
-    height: auto; /* Adjust height to auto for better scrolling */
-  }
-
-  .slot-container,
-  .slot-container-right {
-    position: static; /* Change from fixed to static for better mobile layout */
-    transform: none; /* Remove transform */
-    margin-bottom: 10px; /* Add some margin */
-    flex-direction: row; /* Adjust direction to row */
-    justify-content: center;
-    width: 100%; /* Adjust width */
-  }
-
-  .slot {
-    width: 40px; /* Adjust slot size */
-    height: 40px;
-    margin-bottom: 10px;
-  }
-
-  .clear-btn,
-  .switch-btn,
-  .search-button {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .type-container {
-    gap: 5px;
-  }
-
-  .type-icon {
-    width: 40px; /* Adjust icon size */
-    height: 40px;
-  }
-
-  .center-container {
-    flex-direction: column; /* Change to column for better stacking */
-    gap: 10px;
-  }
-
-  .rect-container {
-    width: 90%; /* Adjust width to fit smaller screens */
-    gap: 10px;
-  }
-
-  .rect {
-    width: 100%; /* Make full width */
-    height: 80px; /* Adjust height */
-  }
-
-  .center-label {
-    width: 40px; /* Adjust label size */
-    height: 40px;
-    font-size: 16px; /* Adjust font size */
-  }
-
-  .center-label-container {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid template */
-    grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
-  }
-
-  .bottom-container,
-  .search-container {
-    position: static; /* Change to static for better mobile layout */
-    transform: none; /* Remove transform */
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Add margin */
-    gap: 10px;
-  }
-
-  .save-container {
-    margin-bottom: 10px;
-  }
-
-  .search-results {
-    position: static; /* Change to static */
-    width: 100%; /* Full width */
-    margin-top: 10px;
-  }
 }
 
 /* ==========================================================================
