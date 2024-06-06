@@ -95,10 +95,12 @@ textarea {
     position: absolute;
     top: 20%;
     left: 50%;
+    transform: translateX(50%);
     display: flex;
     align-items: center;
     gap: 20px;
     width: max-content;
+    height: max-content;
     overflow-x: auto;
     white-space: nowrap; /* Prevent wrapping */
     box-sizing: border-box; /* Ensure padding is included in width calculations */
