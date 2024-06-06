@@ -412,7 +412,16 @@ th {
 
 @media (max-width: 600px) {
   .center-container {
-    top : 50px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 20%;
   }
 }
 
