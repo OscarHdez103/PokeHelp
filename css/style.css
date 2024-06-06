@@ -85,17 +85,19 @@ textarea {
    ========================================================================== */
 @media (max-width: 600px) {
   .center-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
     flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
-    position: fixed;
-    top: 10%;
     left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     overflow-x: auto; /* Enable horizontal scrolling */
-    align-items: center;
   }
 }
 @media (min-width: 601px) {
