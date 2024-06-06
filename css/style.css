@@ -83,7 +83,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   h1 {
     position: fixed;
     left: 50%;
@@ -176,7 +176,7 @@ textarea {
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 801px) {
   .center-container {
     display: flex;
     align-items: center;
