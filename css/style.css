@@ -84,22 +84,98 @@ textarea {
    Author's custom styles
    ========================================================================== */
 @media (max-width: 600px) {
-  .center-container {
-    top: 70%;
+  h1 {
     position: fixed;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px;
     left: 50%;
     width: 100%;
+    transform: translateX(-50%);
+  }
+  .center-container {
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent wrapping */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+  }
+
+  .rect-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px; /* Ensure this matches the width of .rect */
+    margin: 0 10px; /* Add some margin to avoid touching screen edges */
+  }
+
+  .rect {
+    width: 500px; /* Maintain the width */
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .center-label-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+  }
+
+  .slot-container,
+  .slot-container-right {
+    position: fixed;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  /* Ensure the type container doesn't wrap and allows horizontal scrolling  */
+  .type-container {
     overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 20px;
   }
 }
+
 @media (min-width: 601px) {
   .center-container {
     display: flex;
@@ -111,6 +187,69 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .rect-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rect {
+    width: 700px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slot-container,
+  .slot-container-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  /* Ensure the type container doesn't wrap and allows horizontal scrolling  */
+  .type-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 20px;
+  }
+
 }
 
 body {
@@ -124,32 +263,19 @@ body {
   height: 100vh;
   overflow: auto; /* Enable scrolling */
 }
-
 .container {
   width: 1400px; /* Set a fixed width for the main container */
   height: 800px; /* Set a fixed height for the main container */
   overflow: auto; /* Enable scrolling within the container if necessary */
 }
 
-.slot-container,
-.slot-container-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
 .slot-container {
   left: 20px;
 }
-
 .slot-container-right {
   right: 20px;
 }
-
 .slot {
   width: 50px;
   height: 50px;
@@ -161,7 +287,6 @@ body {
   background-position: center;
   position: relative;
 }
-
 .slot .remove-btn {
   position: absolute;
   top: -5px;
@@ -176,15 +301,12 @@ body {
   cursor: pointer;
   display: none;
 }
-
 .slot:hover .remove-btn {
   display: block;
 }
-
 .slot.selected {
   border-color: orange;
 }
-
 .clear-btn {
   margin-top: 10px;
   padding: 5px 10px;
@@ -194,24 +316,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .clear-btn:hover {
   background-color: #d32f2f;
 }
 
-/* Ensure the type container doesn't wrap and allows horizontal scrolling  */
-.type-container {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  margin-top: 20px;
-}
+
 
 /* Ensure type icons maintain their size */
 .type-icon {
@@ -223,27 +332,11 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-
 .type-icon.selected-primary {
   border-color: blue;
 }
-
 .type-icon.selected-secondary {
   border-color: green;
-}
-
-.rect-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.rect {
-  width: 700px;
-  height: 100px;
-  position: relative;
-  overflow: hidden;
 }
 
 .image-container {
@@ -255,13 +348,11 @@ body {
   display: flex;
   align-items: center;
 }
-
 .image-container img {
   width: 10%;
   height: auto;
   margin-right: 5px;
 }
-
 .image-container img:first-child {
   margin-left: 10px;
 }
@@ -269,15 +360,12 @@ body {
 .green {
   background-color: #90ee90;
 }
-
 .light-gray {
   background-color: lightgray;
 }
-
 .red {
   background-color: #ff7f7f;
 }
-
 .dark-gray {
   background-color: darkgray;
 }
@@ -302,17 +390,6 @@ body {
   justify-content: center;
 }
 
-.bottom-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  position: fixed;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-}
 
 .save-container {
   display: flex;
@@ -336,7 +413,6 @@ body {
   gap: 5px;
   margin-top: 5px;
 }
-
 .fake-slot-primary, .fake-slot-secondary {
   width: 20px;
   height: 20px;
@@ -344,7 +420,6 @@ body {
   border-radius: 50%;
   background-color: #e0e0e0;
 }
-
 .switch-btn {
   margin-top: 10px;
   padding: 5px 10px;
@@ -354,28 +429,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .switch-btn:hover {
   background-color: darkorange;
-}
-
-.search-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
 }
 
 .search-input-container {
   display: flex;
   align-items: center;
 }
-
 .search-results {
   position: absolute;
   bottom: -70px;
@@ -383,13 +444,12 @@ body {
   width: 20%;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 0px;
-  padding: 0px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   max-height: 190px;
 }
-
 .result-item {
   margin: 10px 0;
   padding: 10px;
@@ -397,7 +457,6 @@ body {
   border-radius: 5px;
   background-color: #f9f9f9;
 }
-
 .search-button {
   padding: 10px 15px;
   margin-left: 10px;
@@ -407,24 +466,20 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
 input[type="text"] {
   flex-grow: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 th, td {
   text-align: left;
   padding: 5px;
 }
-
 th {
   background-color: #f2f2f2;
 }

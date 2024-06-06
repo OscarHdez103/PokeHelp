@@ -240,7 +240,12 @@ function deleteSave(saveContainer) {
 function adjustIconSizes(container) {
   const imageContainer = container.querySelector('.image-container');
   const icons = imageContainer.querySelectorAll('img');
-  const containerWidth = 700 - 10;
+  let containerWidth;
+  if (window.matchMedia('(min-width: 601px)').matches) {
+    containerWidth = 700 - 10;
+  } else {
+    containerWidth = 500 - 10;
+  }
   const containerHeight = 100;
   const iconCount = icons.length;
   const maxWidthPerIcon = Math.min(containerWidth / iconCount, containerHeight) - 5;
