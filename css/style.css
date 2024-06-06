@@ -89,7 +89,6 @@ textarea {
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
-    scale: 100000%;
   }
   .center-container {
     margin: auto;
