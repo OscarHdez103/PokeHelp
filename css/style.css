@@ -97,6 +97,18 @@ textarea {
     top: 70%;
   }
 }
+@media (min-width: 601px) {
+  .center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -218,16 +230,7 @@ body {
   border-color: green;
 }
 
-.center-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 .rect-container {
   display: flex;
