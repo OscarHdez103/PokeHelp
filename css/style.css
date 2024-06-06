@@ -310,8 +310,6 @@ body {
   background-color: #e0e0e0;
 }
 
-
-
 .switch-btn {
   margin-top: 10px;
   padding: 5px 10px;
@@ -394,6 +392,93 @@ th, td {
 
 th {
   background-color: #f2f2f2;
+}
+
+/* General mobile adjustments */
+@media (max-width: 599px) {
+  body {
+    font-size: 14px; /* Adjust font size for readability */
+    padding: 10px;
+    height: auto; /* Adjust height to auto for better scrolling */
+  }
+
+  .slot-container,
+  .slot-container-right {
+    position: static; /* Change from fixed to static for better mobile layout */
+    transform: none; /* Remove transform */
+    margin-bottom: 10px; /* Add some margin */
+    flex-direction: row; /* Adjust direction to row */
+    justify-content: center;
+    width: 100%; /* Adjust width */
+  }
+
+  .slot {
+    width: 40px; /* Adjust slot size */
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .clear-btn,
+  .switch-btn,
+  .search-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .type-container {
+    gap: 5px;
+  }
+
+  .type-icon {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+  }
+
+  .center-container {
+    flex-direction: column; /* Change to column for better stacking */
+    gap: 10px;
+  }
+
+  .rect-container {
+    width: 90%; /* Adjust width to fit smaller screens */
+    gap: 10px;
+  }
+
+  .rect {
+    width: 100%; /* Make full width */
+    height: 80px; /* Adjust height */
+  }
+
+  .center-label {
+    width: 40px; /* Adjust label size */
+    height: 40px;
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .center-label-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid template */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .bottom-container,
+  .search-container {
+    position: static; /* Change to static for better mobile layout */
+    transform: none; /* Remove transform */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Add margin */
+    gap: 10px;
+  }
+
+  .save-container {
+    margin-bottom: 10px;
+  }
+
+  .search-results {
+    position: static; /* Change to static */
+    width: 100%; /* Full width */
+    margin-top: 10px;
+  }
 }
 
 /* ==========================================================================
