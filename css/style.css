@@ -87,12 +87,12 @@ textarea {
   .center-container {
     overflow-x: auto; /* Enable horizontal scrolling */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
     position: fixed;
     width: 100%;
-    top: 70%;
+    top: 10%;
     align-items: center;
   }
 }
