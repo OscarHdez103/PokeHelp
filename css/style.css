@@ -128,7 +128,7 @@ textarea {
   .slot-container,
   .slot-container-right {
     position: fixed;
-    top: 30%;
+    top: 40%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ textarea {
     justify-content: center;
     gap: 30px;
     position: fixed;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -154,7 +154,7 @@ textarea {
     justify-content: center;
     gap: 30px;
     position: fixed;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
