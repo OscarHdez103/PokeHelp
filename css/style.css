@@ -87,7 +87,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 0;
   width: 100vw;
@@ -95,9 +95,14 @@ body {
   overflow: auto; /* Enable scrolling */
 }
 
-.container {
+.wrapper {
   width: 1200px; /* Set a fixed width for the main container */
   height: 800px; /* Set a fixed height for the main container */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: auto; /* Enable scrolling within the container if necessary */
 }
 
@@ -189,15 +194,6 @@ body {
   background-position: center;
 }
 
-
-.type-icon.selected-primary {
-  border-color: blue;
-}
-
-.type-icon.selected-secondary {
-  border-color: green;
-}
-
 .center-container {
   display: flex;
   align-items: center;
@@ -269,6 +265,7 @@ body {
   font-size: 20px;
   border-radius: 5px;
 }
+
 .center-label-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
