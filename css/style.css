@@ -85,9 +85,9 @@ textarea {
    ========================================================================== */
 @media (max-width: 600px) {
   .center-container {
+    flex-wrap: nowrap;
     overflow-x: auto; /* Enable horizontal scrolling */
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
     position: fixed;
@@ -228,8 +228,6 @@ body {
 .type-icon.selected-secondary {
   border-color: green;
 }
-
-
 
 .rect-container {
   display: flex;
