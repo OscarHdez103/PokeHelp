@@ -86,7 +86,7 @@ textarea {
 @media (max-width: 600px) {
   .center-container {
     position: fixed;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
