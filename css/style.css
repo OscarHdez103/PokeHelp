@@ -179,10 +179,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-
   margin-top: 20px;
-  white-space: nowrap; /* Prevent line breaks within the container */
-  overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 /* Ensure type icons maintain their size */
