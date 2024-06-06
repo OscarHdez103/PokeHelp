@@ -85,6 +85,8 @@ textarea {
    ========================================================================== */
 @media (max-width: 600px) {
   .center-container {
+    left: 50%;
+    transform: translateX(-50%);
     flex-wrap: nowrap;
     overflow-x: auto; /* Enable horizontal scrolling */
     display: flex;
@@ -94,6 +96,7 @@ textarea {
     width: 100%;
     top: 10%;
     align-items: center;
+
   }
 }
 @media (min-width: 601px) {
