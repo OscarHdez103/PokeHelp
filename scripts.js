@@ -683,7 +683,7 @@ async function searchAttack(event) {
             <td>${move.damage_class.name}</td>
           </tr>
           <tr>
-            <td>Effect:</td>
+            <td>*NEW* Effect:</td>
             <td>${move.effect_entries.length ? move.effect_entries.find(entry => entry.language.name === 'en').effect : 'N/A'}</td>
           </tr>
         </table>
